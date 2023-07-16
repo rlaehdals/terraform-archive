@@ -16,5 +16,5 @@ resource "aws_security_group" "security_group" {
   tags = var.tags
 }
 output "security_group_id"{
-  value = aws_security_group.security_group.security_group_id
+  value = aws_security_group.security_group.id
 }
