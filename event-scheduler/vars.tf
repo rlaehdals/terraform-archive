@@ -14,10 +14,6 @@ variable "event_bridge_scheduler_cron" {
   type = string
 }
 
-variable "region" {
-  type = string
-}
-
 variable "tags" {
   type = map(any)
 }
