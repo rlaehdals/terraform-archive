@@ -41,3 +41,7 @@ variable "event_bridge_rule_name"{
 variable "event_bridge_sns_role_name"{
   type = string
 }
+
+variable "account_id"{
+  type = string
+}

@@ -21,14 +21,14 @@ data "aws_iam_policy_document" "cloud_watch_policy_data" {
     sid       = "AWSCloudTrailCreateLogStream2014110"
     effect    = "Allow"
     actions   = ["logs:CreateLogStream"]
-    resources = ["${aws_cloudwatch_log_group.cloud_watch_logs_group.arn}:log-stream:771294917885_CloudTrail_us-east-1*"]
+    resources = ["${aws_cloudwatch_log_group.cloud_watch_logs_group.arn}:log-stream:${var.account_id}_CloudTrail_us-east-1*"]
   }
 
   statement {
     sid       = "AWSCloudTrailPutLogEvents20141101"
     effect    = "Allow"
     actions   = ["logs:PutLogEvents"]
-    resources = ["${aws_cloudwatch_log_group.cloud_watch_logs_group.arn}:log-stream:771294917885_CloudTrail_us-east-1*"]
+    resources = ["${aws_cloudwatch_log_group.cloud_watch_logs_group.arn}:log-stream:${var.account_id}_CloudTrail_us-east-1*"]
   }
 }
 
